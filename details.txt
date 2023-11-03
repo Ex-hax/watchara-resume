@@ -1,0 +1,48 @@
+
+Contact Information:
+Phone: (+66) 850440306
+Email: watchara.c.lee@gmail.com
+Address: 8, Sukhumvit 101/1 Road, Soi Wachirathamsatit 37, Bangjak, Prakanong, Bangkok, 10260
+
+About Me:
+Date of Birth: February 17, 1996
+Nationality: Thai
+Religion: Buddhism
+
+Academic/Activities:
+- Electronic Nose Project at KMITL and I.E.A.T
+- Training in Atomic Force Microscopy at LMS Instruments Co., Ltd.
+- Internship at the Environmental Research and Training Center
+- Google Innovator Bootcamp (G.I.B)
+
+Skills:
+- Proficient in:
+  - Python
+  - Node.js, JavaScript
+  - HTML and CSS
+  - SQL
+  - Batch and Shell Scripting
+- Developer Tools: Git, GitHub, Docker, Google Tag Manager
+- Cloud Technology: Google Cloud Platform
+- Microservices: Flask/Quart, concurrent requests
+- Data Preparation with Python
+- Databases: Postgres, Redis
+- Business Analytics
+- Microsoft Office: Word, Excel, PowerPoint
+- Nanotechnology (Former): Atomic Force Microscopy (AFM), laboratory design and testing
+
+Education:
+- College of Nanotechnology, King Mongkut's Institute of Technology Ladkrabang (KMITL), 2014 - 2018
+- The Demonstration School of Ramkhamhaeng University (High School), 2011 - 2013
+
+Experience:
+- Mintelligence, Data Engineer, Analytics, and Consultant, December 2022 - Present
+- Trinity Roots, ERP System Support and Business Support, May 2021 - October 2022
+- Somerville (Siam) Limited, Project/Product Coordinator, January 2020 - April 2021
+- College of Nanotechnology, King Mongkut's Institute of Technology Ladkrabang, Research Assistant Internship, June 2018 - July 2019
+
+Hobbies:
+- Playing Games and Card Games
+- Coding Games using GatherTown WebSocket API
+- Gardening
+- Reading Books and Articles from the Internet
