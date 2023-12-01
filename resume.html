@@ -270,10 +270,10 @@
             </div>
             <!-- The Band Section -->
             <div class="w3-container w3-content w3-center w3-padding-64" style="max-width: 800px;" id="about">
-                <h2 class="w3-wide">ABOUT ME</h2>
+                <h2 class="w3-wide">ABOUT</h2>
                 <p class="w3-opacity"><i>Watchara Chamnandachakul (Lee)</i></p>
                 <p class="w3-justify">
-                    Hello, I'm Lee, known by my nickname, and I'm passionate about gaming, especially when it involves playing with children. Gardening is another hobby I enjoy. I have a keen interest in Physics, Computer Science, and Coding, which led me to participate in university events like apprenticeships in the Electronic Nose Project at KMITL and I.E.A.T, as well as training with Atomic Force Microscope technology at LMS Instruments Co., Ltd. Additionally, I've had experience as an apprentice at the Environmental Research and Training Center. Oh, and I'm always up for a game of chess!
+                    Over the past two years, I have worked in the information technology industry, specializing in data migration through API and sFTP methodologies. In my recent role as a Data Consultant and Engineer, I spearheaded transformative initiatives to enhance team performance, leveraging cost-effective solutions. By employing Python scripting techniques both on-premises and on-cloud, I successfully optimized workflows, significantly reducing man-hours and achieving a paradigm of low-cost, high productivity. I bring a wealth of experience and a proven track record of driving innovation in data management.
                 </p>
                 <div class="w3-row w3-padding-32">
                     <div class="w3-third">
@@ -297,13 +297,13 @@
                     <div class="w3-third">
                         <!-- <p>Date of birth</p> -->
                         <div class="w3-container w3-white">
-                            <p><b>Programming and Development</b></p>
+                            <p><b>Coding and tools</b></p>
                             <button class="w3-button w3-white w3-margin-bottom" onclick="document.getElementById('skills-i').style.display='block'">see more</button>
                         </div>
                     </div>
                     <div class="w3-third">
                         <div class="w3-container w3-white">
-                            <p><b>Cloud and Technology</b></p>
+                            <p><b>Cloud</b></p>
                             <button class="w3-button w3-white w3-margin-bottom" onclick="document.getElementById('skills-ii').style.display='block'">see more</button>
                         </div>
                     </div>
@@ -362,23 +362,20 @@
                 <div class="w3-modal-content w3-animate-top w3-card-4">
                     <header class="w3-container w3-teal w3-center w3-padding-32">
                         <span onclick="document.getElementById('skills-i').style.display='none'" class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
-                        <h2 class="w3-wide">Programming and Development</h2>
+                        <h2 class="w3-wide">Coding and tools</h2>
                     </header>
                     <div class="w3-container">
                         <p>
                             <label>Python, NodeJS, JavaScript, HTML, CSS and SQL</label>
                         </p>
                         <p>
-                            <label>Batch and Shell Script</label>
+                            <label>Shell Script</label>
                         </p>
                         <p>
                             <label>Git, Git hub, Docker, Google Tag Manager</label>
                         </p>
                         <p>
                             <label>Data preparation with Python script</label>
-                        </p>
-                        <p>
-                            <label>Postgres, Redis</label>
                         </p>
                     </div>
                 </div>
@@ -388,11 +385,20 @@
                 <div class="w3-modal-content w3-animate-top w3-card-4">
                     <header class="w3-container w3-teal w3-center w3-padding-32">
                         <span onclick="document.getElementById('skills-ii').style.display='none'" class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
-                        <h2 class="w3-wide">Cloud and Technology</h2>
+                        <h2 class="w3-wide">Google Cloud Platform</h2>
                     </header>
                     <div class="w3-container">
                         <p>
-                            <label>Google Cloud Platform</label>
+                            <label>Cloud run/function</label>
+                        </p>
+                        <p>
+                            <label>Cloud scheduler</label>
+                        </p>
+                        <p>
+                            <label>BigQuery</label>
+                        </p>
+                        <p>
+                            <label>Postgres</label>
                         </p>
                         <p>
                             <label>Flask/Quart Microservices</label>
@@ -431,7 +437,7 @@
                         <i class="fa fa-envelope" style="width: 30px;"> </i> Email: watchara.c.lee@gmail.com<br />
                     </div>
                     <div class="w3-col m6">
-                        <form action="/action_page.php" target="_blank">
+                        <form action="#">
                             <div class="w3-row-padding" style="margin: 0 -16px 8px -16px;">
                                 <div class="w3-half">
                                     <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name" />
@@ -448,11 +454,10 @@
             </div>
             <!-- End Page Content -->
         </div>
-        <!-- Image of location/map -->
-        <!-- <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width: 100%;" /> -->
-        <!-- Footer -->
         <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <a style="text-decoration: none;" href="https://www.facebook.com/Vaxzero/" target="_blank">
+                <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            </a>
             <!-- <i class="fa fa-instagram w3-hover-opacity"></i> -->
             <!-- <i class="fa fa-snapchat w3-hover-opacity"></i> -->
             <!-- <i class="fa fa-pinterest-p w3-hover-opacity"></i> -->
@@ -463,9 +468,7 @@
         <script>
             // Automatic Slideshow - change image every 4 seconds
             var myIndex = 0;
-            carousel();
-
-            function carousel() {
+            const carousel = () => {
                 var i;
                 var x = document.getElementsByClassName("mySlides");
                 for (i = 0; i < x.length; i++) {
@@ -478,9 +481,9 @@
                 x[myIndex - 1].style.display = "block";
                 setTimeout(carousel, 3500);
             }
-
+            carousel();
             // Used to toggle the menu on small screens when clicking on the menu button
-            function myFunction() {
+            const myFunction = () => {
                 var x = document.getElementById("navDemo");
                 if (x.className.indexOf("w3-show") == -1) {
                     x.className += " w3-show";
@@ -488,20 +491,18 @@
                     x.className = x.className.replace(" w3-show", "");
                 }
             }
-
             // When the user clicks anywhere outside of the modal, close it
             const modals_skill = document.getElementsByName('skills')
             window.onclick = (event) => {
                 if (event.target.className == 'w3-modal'){
-                    modals_skill.forEach((m)=>{
+                    modals_skill.forEach((m)=> {
                         m.style.display = 'none'
                     })
                 }
             };
-            
         </script>
         <script type="text/javascript">
-            window.onload = () =>{
+            window.onload = () => {
                 // Your date of birth
                 const birthDate = new Date('Sat Feb 17 1996 GMT+0700 (Indochina Time)');
                 // Current date
