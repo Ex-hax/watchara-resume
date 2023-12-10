@@ -1,521 +1,218 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <title>Resume</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <script type="text/javascript" src="./source/static/js/prevent.js"></script>
         <style>
-            body {
-                font-family: "Lato", sans-serif;
-            }
-            .mySlides {
-                display: none;
-            }
-            .overlay {
-                background-color: #000;
-                position: fixed;
-                width: 100%;
-                height: 100%;
-                top: 0px;
-                left: 0px;
-                z-index: 1000;
-            }
-
-            #load {
-                position: absolute;
-                width: 600px;
-                height: 36px;
-                left: 50%;
-                top: 40%;
-                margin-left: -300px;
-                overflow: visible;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
+            @import url("./source/static/css/font.css");
+            @import url("./source/static/css/print.css");
+            .w3-light-grey {
                 user-select: none;
-                cursor: default;
-            }
-
-            #load div {
-                position: absolute;
-                width: 20px;
-                height: 36px;
-                opacity: 0;
-                font-family: Helvetica, Arial, sans-serif;
-                animation: move 3.5s linear infinite;
-                -o-animation: move 3.5s linear infinite;
-                -moz-animation: move 3.5s linear infinite;
-                -webkit-animation: move 3.5s linear infinite;
-                transform: rotate(180deg);
-                -o-transform: rotate(180deg);
-                -moz-transform: rotate(180deg);
-                -webkit-transform: rotate(180deg);
-                color: #35c4f0;
-            }
-
-            #load div:nth-child(2) {
-                animation-delay: 0.2s;
-                -o-animation-delay: 0.2s;
-                -moz-animation-delay: 0.2s;
-                -webkit-animation-delay: 0.2s;
-            }
-            #load div:nth-child(3) {
-                animation-delay: 0.4s;
-                -o-animation-delay: 0.4s;
-                -webkit-animation-delay: 0.4s;
-                -webkit-animation-delay: 0.4s;
-            }
-            #load div:nth-child(4) {
-                animation-delay: 0.6s;
-                -o-animation-delay: 0.6s;
-                -moz-animation-delay: 0.6s;
-                -webkit-animation-delay: 0.6s;
-            }
-            #load div:nth-child(5) {
-                animation-delay: 0.8s;
-                -o-animation-delay: 0.8s;
-                -moz-animation-delay: 0.8s;
-                -webkit-animation-delay: 0.8s;
-            }
-            #load div:nth-child(6) {
-                animation-delay: 1s;
-                -o-animation-delay: 1s;
-                -moz-animation-delay: 1s;
-                -webkit-animation-delay: 1s;
-            }
-            #load div:nth-child(7) {
-                animation-delay: 1.2s;
-                -o-animation-delay: 1.2s;
-                -moz-animation-delay: 1.2s;
-                -webkit-animation-delay: 1.2s;
-            }
-            #load div:nth-child(8) {
-                animation-delay: 1.4s;
-                -o-animation-delay: 1.4s;
-                -moz-animation-delay: 1.4s;
-                -webkit-animation-delay: 1.4s;
-            }
-
-            @keyframes move {
-                0% {
-                    left: 0;
-                    opacity: 0;
-                }
-                35% {
-                    left: 41%;
-                    -moz-transform: rotate(0deg);
-                    -webkit-transform: rotate(0deg);
-                    -o-transform: rotate(0deg);
-                    transform: rotate(0deg);
-                    opacity: 1;
-                }
-                65% {
-                    left: 59%;
-                    -moz-transform: rotate(0deg);
-                    -webkit-transform: rotate(0deg);
-                    -o-transform: rotate(0deg);
-                    transform: rotate(0deg);
-                    opacity: 1;
-                }
-                100% {
-                    left: 100%;
-                    -moz-transform: rotate(-180deg);
-                    -webkit-transform: rotate(-180deg);
-                    -o-transform: rotate(-180deg);
-                    transform: rotate(-180deg);
-                    opacity: 0;
-                }
-            }
-
-            @-moz-keyframes move {
-                0% {
-                    left: 0;
-                    opacity: 0;
-                }
-                35% {
-                    left: 41%;
-                    -moz-transform: rotate(0deg);
-                    transform: rotate(0deg);
-                    opacity: 1;
-                }
-                65% {
-                    left: 59%;
-                    -moz-transform: rotate(0deg);
-                    transform: rotate(0deg);
-                    opacity: 1;
-                }
-                100% {
-                    left: 100%;
-                    -moz-transform: rotate(-180deg);
-                    transform: rotate(-180deg);
-                    opacity: 0;
-                }
-            }
-
-            @-webkit-keyframes move {
-                0% {
-                    left: 0;
-                    opacity: 0;
-                }
-                35% {
-                    left: 41%;
-                    -webkit-transform: rotate(0deg);
-                    transform: rotate(0deg);
-                    opacity: 1;
-                }
-                65% {
-                    left: 59%;
-                    -webkit-transform: rotate(0deg);
-                    transform: rotate(0deg);
-                    opacity: 1;
-                }
-                100% {
-                    left: 100%;
-                    -webkit-transform: rotate(-180deg);
-                    transform: rotate(-180deg);
-                    opacity: 0;
-                }
-            }
-
-            @-o-keyframes move {
-                0% {
-                    left: 0;
-                    opacity: 0;
-                }
-                35% {
-                    left: 41%;
-                    -o-transform: rotate(0deg);
-                    transform: rotate(0deg);
-                    opacity: 1;
-                }
-                65% {
-                    left: 59%;
-                    -o-transform: rotate(0deg);
-                    transform: rotate(0deg);
-                    opacity: 1;
-                }
-                100% {
-                    left: 100%;
-                    -o-transform: rotate(-180deg);
-                    transform: rotate(-180deg);
-                    opacity: 0;
-                }
+                pointer-events: none;
             }
         </style>
     </head>
-    <body>
-        <div id="loading_layer" align="center" class="overlay">
-            <div id="load">
-                <div>.</div>
-                <div>G</div>
-                <div>N</div>
-                <div>I</div>
-                <div>D</div>
-                <div>A</div>
-                <div>O</div>
-                <div>L</div>
-            </div>
-        </div>
-        <!-- Navbar -->
-        <div class="w3-top">
-            <div class="w3-bar w3-black w3-card">
-                <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-                <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-                <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
-                <a href="#story" class="w3-bar-item w3-button w3-padding-large w3-hide-small">STORY</a>
-                <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
-                <a href="#" style="text-decoration: none;" class="w3-padding-large w3-hover-red w3-hide-small w3-right">Print</a>
-            </div>
-        </div>
-        <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-        <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top: 46px;">
-            <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
-            <a href="#story" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">STORY</a>
-            <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-            <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a> -->
-        </div>
-        <!-- Page content -->
-        <div class="w3-content" style="max-width: 2000px; margin-top: 46px;">
-            <!-- Automatic Slideshow Images -->
-            <div class="mySlides w3-display-container w3-center">
-                <img src="https://c4.wallpaperflare.com/wallpaper/244/41/128/quote-inspirational-typography-motivational-wallpaper-preview.jpg" style="width: 100%;" />
-                <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-                    <h3></h3>
-                    <p><b></b></p>
-                </div>
-            </div>
-            <div class="mySlides w3-display-container w3-center">
-                <img src="https://c0.wallpaperflare.com/preview/179/449/151/technology-networking-abstract-business.jpg" style="width: 100%;" />
-                <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-                    <h3 style="color: black;">Data Engineer/Consultant</h3>
-                    <p style="color: black;"><b>Mintelligence December 2022 - Present</b></p>
-                </div>
-            </div>
-            <div class="mySlides w3-display-container w3-center">
-                <img src="https://c0.wallpaperflare.com/preview/1021/163/815/technology-networking-abstract-business.jpg" style="width: 100%;" />
-                <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-                    <h3>ERP System Support and Business Support</h3>
-                    <p><b>Trinity Roots May 2021 - October 2022</b></p>
-                </div>
-            </div>
-            <div class="mySlides w3-display-container w3-center">
-                <img src="https://c0.wallpaperflare.com/preview/179/449/151/technology-networking-abstract-business.jpg" style="width: 100%;" />
-                <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-                    <h3 style="color: black;">Project/Product Coordinator</h3>
-                    <p style="color: black;"><b>Somerville (Siam) Limited January 2020 - April 2021</b></p>
-                </div>
-            </div>
-            <!-- The Band Section -->
-            <div class="w3-container w3-content w3-center w3-padding-64" style="max-width: 800px;" id="about">
-                <h2 class="w3-wide">ABOUT</h2>
-                <p class="w3-opacity"><i>Watchara Chamnandachakul (Lee)</i></p>
-                <p class="w3-justify">
-                    Over the past two years, I have worked in the information technology industry, specializing in data migration through API and sFTP methodologies. In my recent role as a Data Consultant and Engineer, I spearheaded transformative initiatives to enhance team performance, leveraging cost-effective solutions. By employing Python scripting techniques both on-premises and on-cloud, I successfully optimized workflows, significantly reducing man-hours and achieving a paradigm of low-cost, high productivity. I bring a wealth of experience and a proven track record of driving innovation in data management.
-                </p>
-                <div class="w3-row w3-padding-32">
-                    <div class="w3-third">
-                        <div class="w3-container w3-white">
-                            <p><b>BirthDay</b></p>
-                            <p id="age" class="w3-opacity"></p>
+    <body class="w3-light-grey" >
+        <!-- Page Container -->
+        <div class="w3-content w3-margin-top" style="max-width: 1400px;">
+            <!-- The Grid -->
+            <div class="w3-row-padding">
+                <!-- Left Column -->
+                <div class="w3-third">
+                    <div class="w3-white w3-text-grey w3-card-4">
+                        <div class="w3-display-container">
+                            <img src=".\source\static\img\me.jpg" style="width: 100%;" alt="Avatar" />
+                            <!--                         <div class="w3-display-bottomleft w3-container w3-text-black">
+                            <h3>Watchara Chamnandachakul Lee</h3>
+                        </div> -->
+                        </div>
+                        <div class="w3-container">
+                            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i><b>Watchara Chamnandachakul Lee</b></p>
+                            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>8, Sukhumvit 101/1 Road, Wachirathamsatit 37, Bangjak, Prakanong, Bangkok, 10260</p>
+                            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>watchara.c.lee@gmail.com</p>
+                            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+66 850440306</p>
+                            <hr />
+                            <p class="w3-large">
+                                <b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b>
+                            </p>
+                            <p>Coding and tools</p>
+                            <ui>
+                                <li>
+                                    <label>Python, NodeJS, JavaScript, HTML, CSS and SQL</label>
+                                </li>
+                                <li>
+                                    <label>Shell Script</label>
+                                </li>
+                                <li>
+                                    <label>Git, Git hub, Docker, Google Tag Manager</label>
+                                </li>
+                                <li>
+                                    <label>Data preparation with Python script</label>
+                                </li>
+                            </ui>
+                            <!--                         <div class="w3-light-grey w3-round-xlarge w3-small">
+                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
+                        </div> -->
+                            <p>Google Cloud Platform</p>
+                            <ui>
+                                <li>
+                                    <label>Cloud run/function</label>
+                                </li>
+                                <li>
+                                    <label>Cloud scheduler</label>
+                                </li>
+                                <li>
+                                    <label>BigQuery Postgres</label>
+                                </li>
+                                <li>
+                                    <label>Flask/Quart Microservices</label>
+                                </li>
+                            </ui>
+                            <!--                         <div class="w3-light-grey w3-round-xlarge w3-small">
+                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
+                                <div class="w3-center w3-text-white">80%</div>
+                            </div>
+                        </div> -->
+                            <p>Additional Skills</p>
+                            <ui>
+                                <li>
+                                    <label>Business Analytics</label>
+                                </li>
+                                <li>
+                                    <label>Laboratory Design and Testing</label>
+                                </li>
+                                <li>
+                                    <label>GatherTown client websocket API for gaming</label>
+                                </li>
+                                <li>
+                                    <label>Tiled - 2D map for gaming</label>
+                                </li>
+                            </ui>
+                            <!--                         <div class="w3-light-grey w3-round-xlarge w3-small">
+                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
+                        </div> -->
+                            <br />
+                            <p class="w3-large w3-text-theme">
+                                <b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b>
+                            </p>
+                            <ui>
+                                <li>
+                                    <label>Thai</label>
+                                </li>
+                                <li>
+                                    <label>English</label>
+                                </li>
+                            </ui>
+                            <br />
+                            <p class="w3-large w3-text-theme">
+                                <b><i class="fa fa-map fa-fw w3-margin-right w3-text-teal"></i>Interesting field</b>
+                            </p>
+                            <ui>
+                                <li>
+                                    <label>Artificial Intelligence (AI) and Machine Learning</label>
+                                </li>
+                                <li>
+                                    <label>Quantum Physics</label>
+                                </li>
+                            </ui>
+                            <!--                         <div class="w3-light-grey w3-round-xlarge">
+                            <div class="w3-round-xlarge w3-teal" style="height:24px;width:80%"></div>
+                        </div> -->
+                            <br />
                         </div>
                     </div>
-                    <div class="w3-third">
-                        <div class="w3-container w3-white">
-                            <p><b>Nationality</b></p>
-                            <p class="w3-opacity">Thai</p>
-                        </div>
-                    </div>
-                    <div class="w3-third">
-                        <div class="w3-container w3-white">
-                            <p><b>Religion</b></p>
-                            <p class="w3-opacity">Buddhism</p>
-                        </div>
-                    </div>
-                    <div class="w3-third">
-                        <!-- <p>Date of birth</p> -->
-                        <div class="w3-container w3-white">
-                            <p><b>Coding and tools</b></p>
-                            <button class="w3-button w3-white w3-margin-bottom" onclick="document.getElementById('skills-i').style.display='block'">see more</button>
-                        </div>
-                    </div>
-                    <div class="w3-third">
-                        <div class="w3-container w3-white">
-                            <p><b>Cloud</b></p>
-                            <button class="w3-button w3-white w3-margin-bottom" onclick="document.getElementById('skills-ii').style.display='block'">see more</button>
-                        </div>
-                    </div>
-                    <div class="w3-third">
-                        <div class="w3-container w3-white">
-                            <p><b>Additional Skills</b></p>
-                            <button class="w3-button w3-white w3-margin-bottom" onclick="document.getElementById('skills-iii').style.display='block'">see more</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- The Tour Section -->
-            <div class="w3-black" id="story">
-                <div class="w3-container w3-content w3-padding-64" style="max-width: 800px;">
-                    <h2 class="w3-wide w3-center">STORY</h2>
-                    <p class="w3-opacity w3-center"><i>Work experience</i></p>
                     <br />
-                    <ul class="w3-ul w3-border w3-white w3-text-grey">
-                        <li class="w3-padding">Data Engineer/Consultant at <i>Mintelligence</i><span class="w3-right w3-margin-right">Dec 2022 - present</span></li>
-                        <li class="w3-padding">ERP System Support and Business Support at <i>Trinity Roots</i><span class="w3-right w3-margin-right">May 2021 - Oct 2022</span></li>
-                        <li class="w3-padding">Project/Product Coordinator at <i>Somerville (Siam) Limited</i><span class="w3-right w3-margin-right">Jan 2020 - Apr 2021</span></li>
-                        <li class="w3-padding">Research Assistant Internship at <i>King Mongkut's Institute of Technology Ladkrabang</i><span class="w3-right w3-margin-right">Jun 2018 - Jul 2019</span></li>
-                    </ul>
-                    <p class="w3-opacity w3-center"><i>Education</i></p>
-                    <div class="w3-row-padding w3-padding-32" style="margin: 0 -16px;">
-                        <div class="w3-third w3-margin-bottom">
-                            <!-- <img src="/w3images/newyork.jpg" alt="New York" style="width: 100%;" class="w3-hover-opacity" /> -->
-                            <div class="w3-container w3-white">
-                                <p><b>University</b></p>
-                                <p class="w3-opacity">2014 - 2018</p>
-                                <p>College of Nanotechnology, King Mongkut's Institute of Technology Ladkrabang (KMITL)</p>
-                            </div>
+                    <!-- End Left Column -->
+                </div>
+                <!-- Right Column -->
+                <div class="w3-twothird">
+                    <div class="w3-container w3-card w3-white w3-margin-bottom">
+                        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+                        <div class="w3-container">
+                            <h5 class="w3-opacity">
+                                <b>Data Engineer/Consultant at <i>Mintelligence</i></b>
+                            </h5>
+                            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2022 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
+                            <p>
+                                Experienced Data Consultant and Engineer specializing in transformative data migration through API and sFTP methodologies, leading initiatives to enhance team performance and achieve cost-effective solutions
+                                through proficient use of Python scripting techniques.
+                            </p>
+                            <hr />
                         </div>
-                        <div class="w3-third w3-margin-bottom">
-                            <!-- <img src="/w3images/paris.jpg" alt="Paris" style="width: 100%;" class="w3-hover-opacity" /> -->
-                            <div class="w3-container w3-white">
-                                <p><b>High school</b></p>
-                                <p class="w3-opacity">2011 - 2013</p>
-                                <p>The Demonstration School of Ramkhamhaeng University (High School)</p>
-                            </div>
+                        <div class="w3-container">
+                            <h5 class="w3-opacity">
+                                <b>ERP System Support and Business Support at <i>Trinity Roots</i></b>
+                            </h5>
+                            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2021 - Oct 2022</h6>
+                            <p>Conducting comprehensive business analyses, optimizing operational efficiency, and providing consulting services for change request of ERP system.</p>
+                            <hr />
                         </div>
-                        <div class="w3-third w3-margin-bottom">
-                            <!-- <img src="/w3images/sanfran.jpg" alt="San Francisco" style="width: 100%;" class="w3-hover-opacity" /> -->
-                            <div class="w3-container w3-white">
-                                <p><b>Middle School</b></p>
-                                <p class="w3-opacity">2008 - 2010</p>
-                                <p>The Demonstration School of Ramkhamhaeng University (Middle School)</p>
-                            </div>
+                        <div class="w3-container">
+                            <h5 class="w3-opacity">
+                                <b>Project/Product Coordinator at <i>Somerville (Siam) Limited</i></b>
+                            </h5>
+                            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2020 - Apr 2021</h6>
+                            <p>
+                                Experienced professional skilled in meticulous assessments, collaborative planning with design experts, and successful establishment of distinguished company brands for heightened market presence and
+                                recognition
+                            </p>
+                            <br />
+                        </div>
+                        <div class="w3-container">
+                            <h5 class="w3-opacity">
+                                <b>Research Assistant Internship at <i>King Mongkut's Institute of Technology Ladkrabang</i></b>
+                            </h5>
+                            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2018 - Jul 2019</h6>
+                            <p>
+                                Designed and executed experiments for data collection, training, and testing of an SVM machine learning model. Additionally, adapted the model to integrate gas sensor data, facilitating the accurate
+                                classification of toxic gases.
+                            </p>
+                            <br />
                         </div>
                     </div>
-                </div>
-            </div>
-            <!-- Skills Modal -->
-            <!-- Programming and Development -->
-            <div id="skills-i" name="skills" class="w3-modal">
-                <div class="w3-modal-content w3-animate-top w3-card-4">
-                    <header class="w3-container w3-teal w3-center w3-padding-32">
-                        <span onclick="document.getElementById('skills-i').style.display='none'" class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
-                        <h2 class="w3-wide">Coding and tools</h2>
-                    </header>
-                    <div class="w3-container">
-                        <p>
-                            <label>Python, NodeJS, JavaScript, HTML, CSS and SQL</label>
-                        </p>
-                        <p>
-                            <label>Shell Script</label>
-                        </p>
-                        <p>
-                            <label>Git, Git hub, Docker, Google Tag Manager</label>
-                        </p>
-                        <p>
-                            <label>Data preparation with Python script</label>
-                        </p>
+                    <div class="w3-container w3-card w3-white">
+                        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+                        <div class="w3-container">
+                            <h5 class="w3-opacity"><b>University</b></h5>
+                            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2014 - 2018</h6>
+                            <p>College of Nanotechnology, King Mongkut's Institute of Technology Ladkrabang (KMITL)</p>
+                            <hr />
+                        </div>
+                        <div class="w3-container">
+                            <h5 class="w3-opacity"><b>High school</b></h5>
+                            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2011 - 2013</h6>
+                            <p>The Demonstration School of Ramkhamhaeng University (High School)</p>
+                            <hr />
+                        </div>
+                        <div class="w3-container">
+                            <h5 class="w3-opacity"><b>Middle School</b></h5>
+                            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2008 - 2010</h6>
+                            <p>The Demonstration School of Ramkhamhaeng University (Middle School)</p>
+                            <br />
+                        </div>
                     </div>
+                    <br />
+                    <!-- End Right Column -->
                 </div>
+                <!-- End Grid -->
             </div>
-            <!-- Cloud and Infrastructure -->
-            <div id="skills-ii" name="skills" class="w3-modal">
-                <div class="w3-modal-content w3-animate-top w3-card-4">
-                    <header class="w3-container w3-teal w3-center w3-padding-32">
-                        <span onclick="document.getElementById('skills-ii').style.display='none'" class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
-                        <h2 class="w3-wide">Google Cloud Platform</h2>
-                    </header>
-                    <div class="w3-container">
-                        <p>
-                            <label>Cloud run/function</label>
-                        </p>
-                        <p>
-                            <label>Cloud scheduler</label>
-                        </p>
-                        <p>
-                            <label>BigQuery</label>
-                        </p>
-                        <p>
-                            <label>Postgres</label>
-                        </p>
-                        <p>
-                            <label>Flask/Quart Microservices</label>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- Other Skills  -->
-            <div id="skills-iii" name="skills" class="w3-modal">
-                <div class="w3-modal-content w3-animate-top w3-card-4">
-                    <header class="w3-container w3-teal w3-center w3-padding-32">
-                        <span onclick="document.getElementById('skills-iii').style.display='none'" class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
-                        <h2 class="w3-wide">Additional Skills</h2>
-                    </header>
-                    <div class="w3-container">
-                        <p>
-                            <label>Business Analytics</label>
-                        </p>
-                        <p>
-                            <label>Microsoft Office (Word, Excel, PowerPoint)</label>
-                        </p>
-                        <p>
-                            <label>Laboratory Design and Testing</label>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- The Contact Section -->
-            <div class="w3-container w3-content w3-padding-64" style="max-width: 800px;" id="contact">
-                <h2 class="w3-wide w3-center">CONTACT</h2>
-                <p class="w3-opacity w3-center"><i>Drop a note!</i></p>
-                <div class="w3-row w3-padding-32">
-                    <div class="w3-col m6 w3-large w3-margin-bottom">
-                        <i class="fa fa-map-marker" style="width: 30px;"></i>8, Sukhumvit 101/1 Road, Wachirathamsatit 37, Bangjak, Prakanong, Bangkok, 10260<br />
-                        <i class="fa fa-phone" style="width: 30px;"></i> Phone: +66 850440306<br />
-                        <i class="fa fa-envelope" style="width: 30px;"> </i> Email: watchara.c.lee@gmail.com<br />
-                    </div>
-                    <div class="w3-col m6">
-                        <form action="#">
-                            <div class="w3-row-padding" style="margin: 0 -16px 8px -16px;">
-                                <div class="w3-half">
-                                    <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name" />
-                                </div>
-                                <div class="w3-half">
-                                    <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email" />
-                                </div>
-                            </div>
-                            <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message" />
-                            <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <!-- End Page Content -->
+            <!-- End Page Container -->
         </div>
-        <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-            <a style="text-decoration: none;" href="https://www.facebook.com/Vaxzero/" target="_blank">
-                <i class="fa fa-facebook-official w3-hover-opacity"></i>
-            </a>
-            <!-- <i class="fa fa-instagram w3-hover-opacity"></i> -->
-            <!-- <i class="fa fa-snapchat w3-hover-opacity"></i> -->
-            <!-- <i class="fa fa-pinterest-p w3-hover-opacity"></i> -->
-            <!-- <i class="fa fa-twitter w3-hover-opacity"></i> -->
-            <i class="fa fa-linkedin w3-hover-opacity"></i>
-            <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        <footer class="w3-container w3-teal w3-center w3-margin-top">
+            <!--         <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p> -->
+            <br />
+            <br />
         </footer>
-        <script>
-            // Automatic Slideshow - change image every 4 seconds
-            var myIndex = 0;
-            const carousel = () => {
-                var i;
-                var x = document.getElementsByClassName("mySlides");
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";
-                }
-                myIndex++;
-                if (myIndex > x.length) {
-                    myIndex = 1;
-                }
-                x[myIndex - 1].style.display = "block";
-                setTimeout(carousel, 3500);
-            }
-            carousel();
-            // Used to toggle the menu on small screens when clicking on the menu button
-            const myFunction = () => {
-                var x = document.getElementById("navDemo");
-                if (x.className.indexOf("w3-show") == -1) {
-                    x.className += " w3-show";
-                } else {
-                    x.className = x.className.replace(" w3-show", "");
-                }
-            }
-            // When the user clicks anywhere outside of the modal, close it
-            const modals_skill = document.getElementsByName('skills')
-            window.onclick = (event) => {
-                if (event.target.className == 'w3-modal'){
-                    modals_skill.forEach((m)=> {
-                        m.style.display = 'none'
-                    })
-                }
-            };
-        </script>
-        <script type="text/javascript">
-            window.onload = () => {
-                // Your date of birth
-                const birthDate = new Date('Sat Feb 17 1996 GMT+0700 (Indochina Time)');
-                // Current date
-                const currentDate = new Date();
-                // Calculate the difference in milliseconds
-                const differenceInMilliseconds = currentDate - birthDate;
-                // Calculate the age in years
-                const age = Math.floor(differenceInMilliseconds / (365 * 24 * 60 * 60 * 1000));
-                document.getElementById('age').innerHTML = `Sat 17 Feb 1996 (${age})`
-            }
-        </script>
-        <script type="text/javascript">
-            window.addEventListener('load',(e)=>{document.getElementById('loading_layer').remove();});
-        </script>
     </body>
 </html>

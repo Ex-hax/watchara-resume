@@ -1,0 +1,19 @@
+@media print {
+    /* Apply styles only for print */
+    body {
+        font-size: 12pt;
+    }
+
+    /* Hide non-essential elements during printing */
+    body, html {
+        height: 100%; /* Ensure the entire page is printed */
+        overflow: hidden; /* Hide overflow content outside the body */
+    }
+
+    body > *:not(.w3-content) {
+        display: none; /* Hide elements outside of w3-content during printing */
+    }
+    .footer {
+        display: none;
+    }
+}
