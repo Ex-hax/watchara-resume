@@ -12,6 +12,7 @@
     <style>
         @import url("./source/static/css/font.css");
         @import url("./source/static/css/print.css");
+        @import url("./source/static/css/w3_flex.css");
         /*.w3-light-grey {
                 user-select: none;
                 pointer-events: none;
@@ -23,7 +24,7 @@
     <!-- Page Container -->
     <div class="w3-content w3-margin-top" style="max-width: 1400px;">
         <!-- The Grid -->
-        <div class="w3-row-padding">
+        <div class="w3-row-padding equal-row">
             <!-- Left Column -->
             <div class="w3-third">
                 <div class="w3-white w3-text-grey w3-card-4">
@@ -63,109 +64,70 @@
                         <p>College of Nanotechnology, King Mongkut's Institute of Technology
                             Ladkrabang (KMITL)</p>
                         <!-- <h5 class="w3-opacity"><b>High school</b></h5> -->
-                        <h7 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2011 -
+                        <!-- <h7 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2011 -
                             2013</h7>
-                        <p>The Demonstration School of Ramkhamhaeng University (High School)</p>
+                        <p>The Demonstration School of Ramkhamhaeng University (High School)</p> -->
                         <!-- <h5 class="w3-opacity"><b>Middle School</b></h5> -->
-                        <h7 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2008 -
+                        <!-- <h7 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2008 -
                             2010</h7>
                         <p>The Demonstration School of Ramkhamhaeng University (Middle School)
-                        </p>
+                        </p> -->
                         <hr />
                         <p class="w3-large">
                             <b><i class="fa fa-certificate fa-fw w3-margin-right w3-text-teal"></i>Skills</b>
                         </p>
-                        <p>Coding and DevTools</p>
-                        <ui>
-                            <li>
-                                <label>Git, GitHub, GitLab</label>
-                            </li>
-                            <li>
-                                <label>Docker</label>
-                            </li>
-                            <li>
-                                <label>Python, SQL, JavaScript, HTML, CSS</label>
-                            </li>
-                        </ui>
-                        <!--                         <div class="w3-light-grey w3-round-xlarge w3-small">
-                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
-                        </div> -->
-                        <p>Frameworks</p>
-                        <ui>
-                            <li>
-                                <label>Airflow</label>
-                            </li>
-                            <li>
-                                <label>PySpark<label>
-                            </li>
-                            <li>
-                                <label>Flask/Quart</label>
-                            </li>
-                        </ui>
-                        <p>Databases</p>
-                        <ui>
+                        <p><strong>Coding & DevTools</strong></p>
+                        <ul>
+                            <li>Git, GitHub, GitLab</li>
+                            <li>Docker</li>
+                            <li>Python, SQL, JavaScript, HTML, CSS</li>
+                        </ul>
+                        <p><strong>Data Integration & Transfer</strong></p>
+                        <ul>
+                            <li>Apache Kafka</li>
+                            <li>Airbyte</li>
+                            <li>Secure File Transfer Protocol</li>
+                        </ul>
+
+                        <p><strong>Frameworks & Data Processing</strong></p>
+                        <ul>
+                            <li>Apache Airflow</li>
+                            <li>PySpark</li>
+                            <li>Flask / Quart</li>
+                        </ul>
+
+                        <p><strong>Databases</strong></p>
+                        <ul>
                             <li>PostgreSQL</li>
                             <li>MySQL</li>
                             <li>Microsoft SQL Server</li>
-                        </ui>
-                        <p>Platform</p>
-                        <ui>
+                        </ul>
+
+                        <p><strong>Platforms</strong></p>
+                        <ul>
                             <li>
-                                <label>Google Cloud Compute</label>
+                                Google Cloud
+                                <ul>
+                                    <li>Compute Engine</li>
+                                    <li>Cloud Scheduler</li>
+                                    <li>Cloud Storage (GCS)</li>
+                                    <li>BigQuery</li>
+                                    <li>API Gateway</li>
+                                    <li>Tag Manager</li>
+                                </ul>
                             </li>
                             <li>
-                                <label>Google Cloud Storage</label>
+                                Huawei Cloud
+                                <ul>
+                                    <li>Data Lake Insight (Spark-based platform)</li>
+                                    <li>Object Storage (OBS)</li>
+                                </ul>
                             </li>
-                            <li>
-                                <label>Google Cloud BigQuery</label>
-                            </li>
-                            <li>
-                                <label>Google API Gateway</label>
-                            </li>
-                            <li>
-                                <label>Google Tag Manager</label>
-                            </li>
-                            <li>
-                                <label>Huawei Data Lake Insight (Spark-based
-                                    platform)</label>
-                            </li>
-                            <li>
-                                <label>Huawei Object Storage</label>
-                            </li>
-                            <li>
-                                <label>Airbyte</label>
-                            </li>
-                            <li>
-                                <label>DataHub</label>
-                            </li>
-                            <li>
-                                <label>Odoo, Salesforce</label>
-                            </li>
-                            <li>
-                                <label>CDP Customer Data Platform</label>
-                            </li>
-                            <li>
-                                <label>JIRA</label>
-                            </li>
-                        </ui>
-                        <!--                         <div class="w3-light-grey w3-round-xlarge w3-small">
-                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
-                                <div class="w3-center w3-text-white">80%</div>
-                            </div>
-                        </div> -->
-                        <!-- <p>Additional Skills</p>
-						<ui>
-							<li>
-								<label>Laboratory design and testing</label>
-							</li>
-							<li>
-								<label>Business analytics and support</label>
-							</li>
-						</ui> -->
-                        <!--                         <div class="w3-light-grey w3-round-xlarge w3-small">
-                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
-                        </div> -->
-                        <br />
+                            <li>DataHub</li>
+                            <li>Odoo, Salesforce, CDP (Customer Data Platform)</li>
+                            <li>JIRA</li>
+                        </ul>
+                        <hr />
                         <p class="w3-large w3-text-theme">
                             <b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b>
                         </p>
@@ -177,28 +139,6 @@
                                 <label>English</label>
                             </li>
                         </ui>
-                        <!-- <br /> -->
-                        <!-- <p class="w3-large w3-text-theme">
-							<b><i class="fa fa-map fa-fw w3-margin-right w3-text-teal"></i>Interesting
-								field and hobbies</b>
-						</p>
-						<ui>
-							<li>
-								<label>Scientific</label>
-							</li>
-							<li>
-								<label>Game coding</label>
-							</li>
-							<li>
-								<label>Books</label>
-							</li>
-							<li>
-								<label>Travel&Foods</label>
-							</li>
-						</ui> -->
-                        <!--                         <div class="w3-light-grey w3-round-xlarge">
-                            <div class="w3-round-xlarge w3-teal" style="height:24px;width:80%"></div>
-                        </div> -->
                         <br />
                     </div>
                     <br />
@@ -209,25 +149,18 @@
             <!-- Right Column -->
             <div class="w3-twothird">
                 <div class="w3-container w3-card w3-white w3-margin-bottom">
-                    <!-- <h3 class="w3-text-grey w3-padding-16"><i -->
-                    <!--         class="fa fa-suitcase fa-fw w3-margin-right w3-text-teal"></i>Work -->
-                    <!--     Experience</h3> -->
                     <div class="w3-container">
                         <h3 class="w3-text-grey w3-padding-16"><i
                                 class="fa fa-suitcase fa-fw w3-margin-right w3-text-teal"></i>Work
                             Experience</h3>
                         <h5 class="w3-opacity">
-                            <b>Data Engineer at <i>Siam Piwat (Contract)</i></b>
+                            <b>Senior Data Engineer at <i>Siam Piwat</i></b>
                         </h5>
-                        <!-- <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2022 - <span class="w3-tag w3-teal w3-round">Current</span></h6> -->
                         <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>July
                             2024 - <span class="w3-tag w3-teal w3-round">Present</span></h6>
                         <p>
-                            Experienced in designing and optimizing data pipelines using
-                            tools like Airflow and Airbyte workflows.
-                            Hands-on experience with PostgreSQL database, PySpark for
-                            data processing, and Kafka for real-time streaming.
-                            Leveraging tools like object storage.
+                            Senior Data Engineer with expertise in building end-to-end data pipelines, orchestrating workflows with Airflow and Airbyte, 
+                            and leveraging PySpark and Kafka for large-scale batch processing across cloud platforms (GCP & Huawei).
                         </p>
                         <p>
                             <i>
@@ -236,33 +169,38 @@
                         </p>
                         <ui>
                             <li>
-                                <label>Designing, implementing, and supporting data pipelines to ensure consistency of
-                                    data flow and processing.</label>
+                                <label>Designed, implemented, and optimized end-to-end data pipelines using Airflow and Airbyte to ensure consistency, scalability, 
+                                    and data quality across platforms.</label>
                             </li>
                             <li>
-                                <label>Resolving data pipeline issues and addressing data-related concerns from
-                                    dashboards, data users, and the analytics team.</label>
+                                <label>Resolved data pipeline issues by identifying root causes, implementing fixes, and preventing recurrence, 
+                                    working closely with dashboard, analytics, and business teams.</label>
                             </li>
                             <li>
-                                <label>Migrating Airflow code to accommodate API changes across different
-                                    versions.</label>
+                                <label>Developed ETL and ELT workflows using PySpark for large-scale batch processing and Apache Kafka for real-time streaming.</label>
                             </li>
                             <li>
-                                <label>Utilizing Airbyte to store raw data as Parquet files in Huawei OBS and Google
-                                    Cloud Storage (GCS).</label>
+                                <label>Created curated and analytical tables based on user requirements, 
+                                    implementing Slowly Changing Dimensions (SCD) and data modeling techniques including star schema and Inmon approaches.</label>
                             </li>
                             <li>
-                                <label>Extract transform and load data using PySpark.</label>
+                                <label>Migrated and maintained Airflow DAGs to accommodate API changes across multiple versions, ensuring pipeline reliability and minimal downtime.</label>
                             </li>
                             <li>
-                                <label>Create curated tables based on data users requirements.</label>
+                                <label>Leveraged data integration tools such as Airbyte to ingest and store raw data as Parquet files in Huawei OBS and Google Cloud Storage (GCS).</label>
                             </li>
-
                             <li>
-                                <label>Developing and documenting business requirements and functional
-                                    specifications.</label>
+                                <label>Documented business requirements and functional specifications, translating them into technical solutions using tools such as JIRA and Confluence.</label>
                             </li>
-
+                            <li>
+                                <label>Ensured data quality and governance by implementing validation, monitoring, and alerting across data pipelines.</label>
+                            </li>
+                            <li>
+                                <label>Provided mentorship and support to team members and trained business users on effective data usage.</label>
+                            </li>
+                            <li>
+                                <label>Owned data projects end-to-end — from requirement gathering, design, and development to deployment, monitoring, and support.</label>
+                            </li>
                         </ui>
                         <hr />
                     </div>
@@ -271,7 +209,6 @@
                             <b>Solution Consultant/Data Analyst at
                                 <i>Mintelligence</i></b>
                         </h5>
-                        <!-- <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2022 - <span class="w3-tag w3-teal w3-round">Current</span></h6> -->
                         <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec
                             2022 - May 2024</h6>
                         <p>
@@ -369,27 +306,8 @@
                             distinguished company brands for heightened market presence and
                             recognition.
                         </p>
-                        <!-- <hr /> -->
                         <br />
                     </div>
-                    <!-- <div class="w3-container">
-						<h5 class="w3-opacity">
-							<b>Research Assistant apprenticeship at <i>King Mongkut's
-									Institute of Technology Ladkrabang</i></b>
-						</h5>
-						<h6 class="w3-text-teal"><i
-								class="fa fa-calendar fa-fw w3-margin-right"></i>Jun
-							2018 - Jul 2019</h6>
-						<p>
-							Designed and executed experiments for data collection, training,
-							and testing of an SVM machine learning model. Additionally,
-							adapted the model to integrate gas sensor data, facilitating the
-							accurate
-							classification of toxic gases.
-						</p>
-						<br />
-
-					</div> -->
                 </div>
                 <!-- <div class="w3-container w3-card w3-white">
 					<h2 class="w3-text-grey w3-padding-16"><i
@@ -430,13 +348,6 @@
         <!-- End Page Container -->
     </div>
     <footer class="w3-container w3-teal w3-center w3-margin-top">
-        <!--         <i class="fa fa-facebook-official w3-hover-opacity"></i>
-        <i class="fa fa-instagram w3-hover-opacity"></i>
-        <i class="fa fa-snapchat w3-hover-opacity"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-        <i class="fa fa-twitter w3-hover-opacity"></i>
-        <i class="fa fa-linkedin w3-hover-opacity"></i>
-        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p> -->
         <br />
         <br />
     </footer>
