@@ -1,0 +1,27 @@
+/* Equal-height columns using Flexbox with W3.css */
+.equal-row {
+  display: flex;
+  align-items: stretch;
+  gap: 2px;                 /* spacing similar to w3-row-padding */
+}
+
+/* Override W3 float grid so Flex can control widths/heights */
+.equal-row > .w3-third,
+.equal-row > .w3-twothird {
+  float: none !important;    /* disable floats */
+  width: auto !important;    /* let flex handle widths */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Keep the 1/3 vs 2/3 proportion */
+.equal-row > .w3-third   { flex: 1; }
+.equal-row > .w3-twothird{ flex: 2; }
+
+/* Make the cards fill the full column height */
+.equal-row .w3-card,
+.equal-row .w3-card-4 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
